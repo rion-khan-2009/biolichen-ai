@@ -1,3 +1,4 @@
+import { API_URL } from './config'
 import { useState, useCallback } from 'react'
 import './index.css'
 import MapView from './MapView'
@@ -42,7 +43,7 @@ function App() {
     setImgError(false)
 
     try {
-      const res = await fetch(`http://localhost:5000/api/district/${encodeURIComponent(name)}`)
+      const res = await fetch(`${API_URL}/api/district/${encodeURIComponent(name)}`)
       const data = await res.json()
       setWeather(data.weather)
       setAqi(data.aqi)

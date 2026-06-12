@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import { API_URL } from './config'
 
 function ChatBot({ districtData, onClose }) {
   const [messages, setMessages] = useState([
